@@ -1,0 +1,231 @@
+body {
+     margin-top: 150px;
+  background-color: #000;
+ }
+
+@-ms-keyframes rotation {
+ from {
+    transform: rotatey(0deg) translatex(400px) rotatex(0deg) ;
+  }
+  to{
+    transform:rotatey(360deg) translatex(400px) rotatex(720deg) ;
+  }
+}
+
+@-moz-keyframes rotation {
+   from {
+    transform: rotatey(0deg) translatex(400px) rotatex(0deg) ;
+  }
+  to{
+    transform:rotatey(360deg) translatex(400px) rotatex(720deg) ;
+  }
+}
+@-webkit-keyframes rotation {
+ from {
+    transform: rotatey(0deg) translatex(400px) rotatex(0deg) ;
+  }
+  to{
+    transform:rotatey(360deg) translatex(400px) rotatex(720deg) ;
+  }
+}
+@keyframes rotation {
+ from {
+    transform: rotatey(0deg) translatex(400px) rotatex(0deg) ;
+  }
+  to{
+    transform:rotatey(360deg) translatex(400px) rotatex(720deg) ;
+  }
+}
+
+#container {
+  -webkit-perspective : 15500px;
+  -moz-perspective    : 15500px;
+  -ms-perspective     : 15500px;
+  perspective         : 15500px;
+
+  -webkit-perspective-origin  : 50% 50%;
+  -moz-perspective-origin     : 50% 50%;
+  -moz-transform-origin       : 50% 50%;
+  -ms-perspective-origin      : 50% 50%;
+  perspective-origin          : 50% 50%;
+}
+
+.animate {
+  -webkit-animation : rotation 6s infinite linear;
+  -moz-animation    : rotation 6s infinite linear;
+  -ms-animation     : rotation 6s infinite linear;
+  animation         : rotation 6s infinite linear;
+}
+
+#octagonal {
+  position: relative;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  padding: 0px;
+
+  -webkit-transition  : -webkit-transform 2s linear;
+  -moz-transition     : -moz-transform 2s linear;
+  -ms-transition      : -ms-transform 2s linear;
+  transition          : transform 2s linear;
+
+  -webkit-transform-style : preserve-3d;
+  -moz-transform-style    : preserve-3d;
+  -ms-transform-style     : preserve-3d;
+  transform-style         : preserve-3d;
+}
+
+#octagonal>div {
+  position: absolute;
+  height: 84px;
+  width: 200px;
+  padding: 0px;
+  background-position:center center;
+}
+
+/*Восьмиугольник1*/
+div#octagon1 {
+  
+  width: 200px;
+  height: 84px;
+  top: 58px;
+  background: #BDB76B;
+  position: relative;
+  opacity: 0.5;
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  -moz-transform: rotateY(90deg) translateZ(100px);
+  -ms-transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(100px);
+}
+ 
+#octagon1:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;    
+  border-bottom: 58px solid #BDB76B;
+  border-left: 58px solid transparent;
+  border-right: 58px solid transparent;
+  height: 0;
+  width: 84px;
+}
+ 
+#octagon1:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;    
+  border-top: 58px solid #BDB76B;
+  border-left: 58px solid transparent;
+  border-right: 58px solid transparent;
+  height: 0;
+  width: 84px;
+}
+
+/*Восьмиугольник2*/
+div#octagon2 {
+  position: relative;
+  top:-25px;
+  width: 200px;
+  height: 84px;
+  background: #BDB76B;
+  opacity:0.5;
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+  -moz-transform: rotateY(-90deg) translateZ(100px);
+  -ms-transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+ 
+#octagon2:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 0;    
+  border-bottom: 58px solid #BDB76B;
+  border-left: 58px solid transparent;
+  border-right: 58px solid transparent;
+  height: 0;
+  width: 84px;
+}
+ 
+#octagon2:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;    
+  border-top: 58px solid #BDB76B;
+  border-left: 58px solid transparent;
+  border-right: 58px solid transparent;
+  height: 0;
+  width: 84px;
+}
+
+/*Грани восьмиугольго паралелепипеда*/
+#octagonal div:nth-of-type(even){
+height: 82px;
+}
+
+#octagonal div:nth-child(1) {
+  -webkit-transform: translateZ(100px) translateY(58px);
+  -moz-transform: translateZ(100px) translateY(58px);
+  -ms-transform: translateZ(100px) translateY(58px);
+  transform  translateZ(100px) translateY(58px);
+  background-color: red;
+}
+
+#octagonal div:nth-child(2) {
+  -webkit-transform: rotateX(45deg) translateZ(58px) translateY(42px);
+  -moz-transform: rotateX(45deg) translateZ(58px) translateY(42px);
+  -ms-transform: rotateX(45deg) translateZ(58px) translateY(42px);
+  transform: rotateX(45deg) translateZ(58px) translateY(42px);
+  background-color: orange;
+}
+
+#octagonal div:nth-child(3) {
+  -webkit-transform: rotateX(90deg) translateZ(41px);
+  -moz-transform: rotateX(90deg) translateZ(41px);
+  -ms-transform: rotateX(90deg) translateZ(41px);
+  transform: rotateX(90deg) translateZ(41px);
+  background-color: yellow;
+}
+
+#octagonal div:nth-child(4) {
+  -webkit-transform: rotateX(-45deg) translateZ(-58px) translateY(42px);
+  -moz-transform: rotateX(-45deg) translateZ(-58px) translateY(42px);
+  -ms-transform: rotateX(-45deg) translateZ(-58px) translateY(42px);
+  transform: rotateX(-45deg) translateZ(-58px) translateY(42px);
+  background-color: green;
+}
+
+#octagonal div:nth-child(5) {
+  -webkit-transform: translateZ(-100px) translateY(58px);
+  -moz-transform: translateZ(-100px) translateY(58px);
+  -ms-transform: translateZ(-100px) translateY(58px);
+  transform: translateZ(-100px) translateY(58px);
+  background-color: #00FA9A;
+}
+
+#octagonal div:nth-child(6)  {
+  
+  -webkit-transform: rotateX(45deg) translateZ(-142px) translateY(41px);
+  -moz-transform: rotateX(45deg) translateZ(-142px) translateY(41px);
+  -ms-transform: rotateX(45deg) translateZ(-142px) translateY(41px);
+  transform: rotateX(45deg) translateZ(-142px) translateY(41px);
+  background-color: cyan;
+}
+
+#octagonal div:nth-child(7)  {
+  -webkit-transform: rotateX(90deg) translateZ(-158px);
+  -moz-transform: rotateX(90deg) translateZ(-158px);
+  -ms-transform: rotateX(90deg) translateZ(-158px);
+  transform: rotateX(90deg) translateZ(-158px);
+  background-color: blue;
+}
+#octagonal div:nth-child(8)  {
+ 
+  -webkit-transform: rotateX(-45deg) translateZ(142px) translateY(41px);
+  -moz-transform: rotateX(-45deg) translateZ(142px) translateY(41px);
+  -ms-transform: rotateX(-45deg) translateZ(142px) translateY(41px);
+  transform: rotateX(-45deg) translateZ(142px) translateY(41px);
+  background-color: #4B0082;
+}

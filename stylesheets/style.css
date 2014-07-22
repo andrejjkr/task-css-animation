@@ -2,31 +2,31 @@ body {
      margin-top: 150px;
   background-color: #000;
  }
-/*движение восьмиугольго паралелепипеда*/
-@-webkit-keyframes rotation-octa {
+ /*движение восьмиугольго паралелепипеда*/
+@-moz-keyframes rotation-octa {
  from {
-    transform: rotateY(0deg) translateX(400px) rotateX(0deg) ;
+    -moz-transform: rotateY(0deg) translateX(400px) rotateX(0deg) ;
   }
   to{
-    transform: rotateY(360deg) translateX(400px) rotateX(720deg) ;
+    -moz-transform: rotateY(360deg) translateX(400px) rotateX(720deg) ;
   }
 }
 
-@-moz-keyframes rotation-octa {
+@-webkit-keyframes rotation-octa {
  from {
-    transform: rotateY(0deg) translateX(400px) rotateX(0deg) ;
+     -webkit-transform: rotateY(0deg) translateX(400px) rotateX(0deg) ;
   }
   to{
-    transform: rotateY(360deg) translateX(400px) rotateX(720deg) ;
+     -webkit-transform: rotateY(360deg) translateX(400px) rotateX(720deg) ;
   }
 }
 
 @-ms-keyframes rotation-octa {
  from {
-    transform: rotateY(0deg) translateX(400px) rotateX(0deg) ;
+    -ms-transform: rotateY(0deg) translateX(400px) rotateX(0deg) ;
   }
   to{
-    transform: rotateY(360deg) translateX(400px) rotateX(720deg) ;
+    -ms-transform: rotateY(360deg) translateX(400px) rotateX(720deg) ;
   }
 }
 
@@ -39,32 +39,33 @@ body {
   }
 }
 
+
 /*движение куба*/
 @-moz-keyframes  rotation-cube {
   from {
-    transform:  rotatey(0deg) ;
+    -moz-transform:  rotatey(0deg) ;
   }
   to{
-    transform: rotatey(360deg) ;
+    -moz-transform: rotatey(360deg) ;
   }
 }
 
 @-webkit-keyframes rotation-cube {
   from {
-    transform:  rotatey(0deg) ;
+    -webkit-transform:  rotatey(0deg) ;
   }
   to{
-    transform: rotatey(360deg) ;
+    -webkit-transform: rotatey(360deg) ;
   }
 }
 
 
 @-ms-keyframes rotation-cube {
  from {
-    transform:  rotatey(0deg) ;
+    -ms-transform:  rotatey(0deg) ;
   }
   to{
-    transform: rotatey(360deg) ;
+    -ms-transform: rotatey(360deg) ;
   }
 }
 
